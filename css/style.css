@@ -1,10 +1,18 @@
 body {
     margin: 0;
+    /* background-color: white; */
 }
 
-div {
+
+/* div {
     background-color: #E4F9F5;
-}
+} */
+
+
+/* 
+#aboutMeDiv {
+    color: #66BFBF;
+} */
 
 .profile {
     border-radius: 100%;
@@ -39,15 +47,13 @@ p {
     display: block;
 }
 
-
-/* #SkillsContainer {
-    background-color: white;
-} */
-
-
-/* #skillCard {
+#SkillsContainer {
     background-color: #E4F9F5;
-} */
+}
+
+#skillCard {
+    background-color: white;
+}
 
 #h1Skills {
     font-family: "Quicksand";
