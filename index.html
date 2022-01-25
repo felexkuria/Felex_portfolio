@@ -15,7 +15,7 @@
 <body>
     <!-- Nav-bar -->
     <div class="container-fluid p-2">
-        <nav class="navbar navbar-expand-lg justify-content-end navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-end bg-light fixed-top">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,20 +24,20 @@
                     <a class="navbar-brand" href="#"><img id="profile" src="/assets/profile.jpg" alt="" /></a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a id="nav" class="nav-link" href="#">Projects</a>
-                        </li>
-                        <li class="nav-item">
                             <a id="nav" class="nav-link active" aria-current="page" href="#">About Me</a
                 >
               </li>
               <li class="nav-item">
-                <a id="nav" class="nav-link" href="#">Hire Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="nav" class="nav-link" href="#">Skills</a>
+                <a id="nav" class="nav-link" href="#">Skills</a>
                         </li>
                         <li class="nav-item">
                             <a id="nav" class="nav-link" href="#">Work Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav" class="nav-link" href="#">Hire Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav" class="nav-link" href="#">Projects</a>
                         </li>
                     </ul>
                 </div>
@@ -46,26 +46,27 @@
     </div>
 
     <!-- About Me -->
-    <div id="aboutMeDiv" class="container-fluid p-3">
-        <div class="row m-3">
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <img class="profile" src="./assets/profile.jpg" alt="profile" srcset="" />
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 my-2 col-xl-6">
-                <h1 id="h1Name" class="fw-bold fst-normal display-4">
-                    I am Felex Kuria
-                </h1>
-                <p>
-                    I am Web and Mobile Developer, Video Editor , Electrical and Solar Technician. (am intermediate flutter developer now 2022) but am an electrical technician by profession trying to update my skill in programming language
-                </p>
+    <section>
+        <div id="aboutMeDiv" class="container-fluid p-3">
+            <div class="row m-3">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <img class="profile" src="./assets/profile.jpg" alt="profile" srcset="" />
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 my-2 col-xl-6">
+                    <h1 id="h1Name" class="fw-bold fst-normal display-4">
+                        I am Felex Kuria
+                    </h1>
+                    <p>
+                        I am Web and Mobile Developer, Video Editor , Electrical and Solar Technician. (am intermediate flutter developer now 2022) but am an electrical technician by profession trying to update my skill in programming language
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
     <!-- Skills -->
     <h1 id="h1Skills">Skills</h1>
 
-    <div id="SkillsContainer" class="container-fluid">
+    <div id="SkillsContainer" class="container-fluid my-3">
         <div class="row justify-content-center p-2">
             <!-- Card Contain Video Editing Skills -->
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
@@ -146,6 +147,27 @@
 
     <!-- Experience -->
     <h1 id="h1Skills">Experience</h1>
+    <div id="ex" class="container-fluid m-2">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 p-1 border-bottom-0">
+                <h5 class="fw-bold">Video Editor at Felex & Virginia</h5>
+                <h4>April 2019 - Present</h4>
+                <img class="profileskill" src="/assets/felex.png" alt="" srcset="" />
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <h5 class="fw-bold">Intern Video Editor at Biasly</h5>
+                <h4>August 2021 - Present</h4>
+                <img class="profileskill" src="/assets/image001 (1).png" alt="" srcset="" />
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <h5 class="fw-bold">Substation Attendant At Afristar</h5>
+                <h4>Oct 2017- Present</h4>
+                <img class="profileskill" src="/assets/afristar.jfif" alt="" srcset="" />
+            </div>
+        </div>
+    </div>
 </body>
 <!-- <script src="/bootstrap class/html/bootstrap-5.0.2-dist/js/bootstrap.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
