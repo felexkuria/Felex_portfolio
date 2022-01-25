@@ -40,13 +40,14 @@ p {
 }
 
 
-/* #Skills {
+/* #SkillsContainer {
     background-color: white;
 } */
 
-#skillCard {
+
+/* #skillCard {
     background-color: #E4F9F5;
-}
+} */
 
 #h1Skills {
     font-family: "Quicksand";
