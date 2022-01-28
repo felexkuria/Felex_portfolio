@@ -12,10 +12,10 @@
     <title>Felex Portfolio</title>
 </head>
 
-<body>
+<body class="bg-dark">
     <!-- Nav-bar -->
-    <div class="container-fluid p-2">
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-end bg-light fixed-top">
+    <div class="container-fluid  p-2">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-end border-warning border-1 fixed-top">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,10 +28,10 @@
                 >
               </li>
               <li class="nav-item">
-                <a id="nav" class="nav-link" href="#">Skills</a>
+                <a id="nav" class="nav-link" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a id="nav" class="nav-link" href="#">Work Experience</a>
+                            <a id="nav" class="nav-link" href="#experience">Work Experience</a>
                         </li>
                         <li class="nav-item">
                             <a id="nav" class="nav-link" href="#">Hire Me</a>
@@ -48,38 +48,52 @@
     <!-- About Me -->
     <section>
         <div id="aboutMeDiv" class="container-fluid p-3">
-            <div class="row m-3">
-                <div class="col-6">
+            <div class="row  m-3">
+                <div class="col-sm-12 col-md-12 col-lg-6">
                     <img class="profile" src="./assets/profile.jpg" alt="profile" srcset="" />
                     <h1 id="h1Name" class="fw-bold fst-normal display-4">
                         I am Felex Kuria
                     </h1>
                     <p>
-                        I am Web and Mobile Developer, Video Editor , Electrical and Solar Technician. (am intermediate flutter developer now 2022) but am an electrical technician by profession trying to update my skill in programming language
+                        I am Web and Mobile Developer, Video Editor , Electrical and Solar Technician. I am intermediate flutter developer and Beginneer in HTML CSS Bootstrap MYSQL and PHP now 2022 but am an electrical and technician by profession trying to update my skill in
+                        programming language
                     </p>
                 </div>
-                <div class="col-6">
-                    <div class="card">
-                        <div class="card-header">
+                <!-- Skills Section -->
+                <div id="skills" class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="card  border-1 border-secondary">
+                        <div class="card-header border-1 border-dark bg-dark">
                             <h4 id="h1Skills">Skills</h4>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body bg-dark">
                             <div class="container">
                                 <div class="row ">
 
                                     <!-- Video Editing Skills -->
-                                    <div class="col-6">
+                                    <div class="col-sm-12  col-md-12 col-lg-6 my-3">
                                         <div class="container shadow border-5 border-dark">
 
                                             <h5 class=" text-center">1.VIDEO EDITOR & PRODUCER</h5>
                                             <div class="row">
+
+                                                <!-- Story Telling Section -->
+                                                <div class="col-6">
+                                                    <h6 class="h6 d-inline">Story Telling</h6>
+
+                                                    <div class="progress  border border-dark border-1  ">
+                                                        <div class="progress-bar bg-warning  text-dark fw-bold" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            20%
+                                                        </div>
+                                                    </div>
+
+                                                </div>
 
                                                 <!-- Premiere Pro Section -->
                                                 <div class="col-6">
                                                     <h6 class="h6 d-inline">Premiere Pro</h6>
 
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  text-white" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success  text-white fw-bold" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                                             40%
                                                         </div>
                                                     </div>
@@ -87,10 +101,10 @@
                                                 </div>
 
                                                 <!-- After Effects Column -->
-                                                <div class="col-6">
+                                                <div class="col-6 my-3">
                                                     <h6 class="h6 d-inline">After Effects</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-primary  text-white" role="progressbar" style="width: 30%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-primary  text-dark fw-bold" role="progressbar" style="width: 30%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                                             30%
                                                         </div>
                                                     </div>
@@ -100,7 +114,7 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="h6 d-inline">Doodly</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success  fw-bold text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                                             50%
                                                         </div>
                                                     </div>
@@ -109,7 +123,7 @@
                                         </div>
                                     </div>
                                     <!-- Web Development Skills Column -->
-                                    <div class="col-6">
+                                    <div class="col-sm-12 col-md-12 col-lg-6 my-3">
                                         <div class="container shadow border-5 border-dark">
 
                                             <h5 class=" text-center">2.WEB DEVELOPER</h5>
@@ -175,8 +189,8 @@
                                     </div>
 
                                     <!-- Flutter Development Section -->
-                                    <div class="col-6 my-3">
-                                        <div class="container shadow border-5 border-dark">
+                                    <div class="col-sm-12 col-md-12 col-lg-6 my-3">
+                                        <div class="container shadow  border-5 border-warning">
                                             <h5 class="text-center">3.FLUTTER DEVELOPER</h5>
                                             <div class="row">
                                                 <div class="col-6">
@@ -199,7 +213,25 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="d-inline text-break"> UI KIT</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            50%
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-6 my-3">
+                                                    <h6 class="d-inline text-break"> Provider</h6>
+                                                    <div class="progress  border border-dark border-1  ">
+                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            40%
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-6 my-3">
+                                                    <h6 class="d-inline text-break"> GETX</h6>
+                                                    <div class="progress  border border-dark border-1  ">
+                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                                             50%
                                                         </div>
                                                     </div>
@@ -208,23 +240,67 @@
                                             </div>
                                         </div>
 
+
+                                    </div>
+                                    <!--Electrical Section -->
+                                    <div class="col-sm-12 col-md-12 col-lg-6 my-3">
+                                        <div class="container shadow  border-5 border-warning">
+                                            <h5 class="text-center">3.ELECTRICAL TECHNICIAN</h5>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h6 class="d-inline">Theoretical Knowledge</h6>
+                                                    <div class="progress  border border-dark border-1  ">
+                                                        <div class="progress-bar bg-success  text-white" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            60%
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 ">
+                                                    <h6 class="d-inline text-break"> Domestic Wiring</h6>
+                                                    <div class="progress  border border-dark border-1  ">
+                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            80%
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-6 my-3">
+                                                    <h6 class="d-inline text-break"> Solar</h6>
+                                                    <div class="progress  border border-dark border-1  ">
+                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            80%
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-6 my-3">
+                                                    <h6 class="d-inline text-break"> SCADA</h6>
+                                                    <div class="progress  border border-dark border-1  ">
+                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            40%
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
     </section>
     <!-- Skills -->
-    <h1 id="h1Skills">Skills</h1>
+    <!-- <h1 id="h1Skills">Skills</h1>
 
     <div id="SkillsContainer" class="container-fluid my-3">
-        <div class="row justify-content-center p-2">
-            <!-- Card Contain Video Editing Skills -->
-            <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+        <div class="row justify-content-center p-2"> -->
+    <!-- Card Contain Video Editing Skills -->
+    <!-- <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
                 <div id="skillCard" class="card border-2" style="width: 18rem">
                     <div class="card-body p-3">
                         <h5 id="h5Card" class="card-title">Video Editing</h5>
@@ -239,10 +315,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Card Contain ELectrical Skills -->
-            <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+    <!-- Card Contain ELectrical Skills -->
+    <!-- <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
                 <div id="skillCard" class="card border-2" style="width: 18rem">
                     <div class="card-body p-3">
                         <h5 id="h5Card" class="card-title">Solar and Electrical</h5>
@@ -258,10 +334,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Card Contain Web DEV Skills -->
-            <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+    <!-- Card Contain Web DEV Skills -->
+    <!-- <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
                 <div id="skillCard" class="card border-2" style="width: 18rem">
                     <div class="card-body p-3">
                         <h5 id="h5Card" class="card-title">Web Developer</h5>
@@ -277,10 +353,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Flutter Developer . -->
-            <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+    <!-- Flutter Developer . -->
+    <!-- <div id="SkillsCard" class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
                 <div id="skillCard" class="card border-2" style="width: 18rem">
                     <div class="card-body p-3">
                         <h5 id="h5Card" class="card-title">Flutter Developer</h5>
@@ -298,11 +374,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Experience -->
     <h1 id="h1Skills">Experience</h1>
-    <div id="ex" class="container-fluid m-2">
+    <div id="experience" class="container-fluid m-2">
         <div class="row">
             <div class="col-sm-6 col-md-4 p-1 my-2">
                 <h5 class="fw-bold">Video Editor at Felex & Virginia</h5>
