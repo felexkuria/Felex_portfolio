@@ -14,10 +14,10 @@ body {
 }
 
 .profile {
-    border-radius: 100%;
-    width: 40%;
+    border-radius: 500px;
+    width: 250px;
     border: 5px solid #66BFBF;
-    padding: auto;
+    margin-bottom: 20px;
     /* width: 100px
     ; */
 }
