@@ -6,15 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/0b5b062cf7.js" crossorigin="anonymous"></script>
+    <!-- <head> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSbNt"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- </head> -->
+
+    <script src="./fontawesome/js/fontawesome.js"></script>
     <!-- <link rel="stylesheet" href="/bootstrap class/html/bootstrap-5.0.2-dist/css/bootstrap.min.css" /> -->
     <title>Felex Portfolio</title>
 </head>
 
-<body class="bg-dark">
+<body class="">
     <!-- Nav-bar -->
-    <div class="container-fluid  p-2">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <div class="container-fluid  p-2">
         <nav class="navbar navbar-expand-lg navbar-light justify-content-end border-warning border-1 fixed-top">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +85,7 @@
                 </div>
             </div>
         </nav>
-    </div>
+    </div> -->
 
     <!-- About Me -->
     <section>
@@ -55,7 +97,9 @@
                         I am Felex Kuria
                     </h1>
                     <p>
-                        I am Web and Mobile Developer, Video Editor , Electrical and Solar Technician. I am intermediate flutter developer and Beginneer in HTML CSS Bootstrap MYSQL and PHP now 2022 but am an electrical and technician by profession trying to update my skill in
+                        I am Web and Mobile Developer, Video Editor , Electrical and Solar Technician. I am intermediate
+                        flutter developer and Beginneer in HTML CSS Bootstrap MYSQL and PHP now 2022 but am an
+                        electrical and technician by profession trying to update my skill in
                         programming language
                     </p>
                 </div>
@@ -81,7 +125,9 @@
                                                     <h6 class="h6 d-inline">Story Telling</h6>
 
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-warning  text-dark fw-bold" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-warning  text-dark fw-bold"
+                                                            role="progressbar" style="width: 20%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             20%
                                                         </div>
                                                     </div>
@@ -93,7 +139,9 @@
                                                     <h6 class="h6 d-inline">Premiere Pro</h6>
 
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  text-white fw-bold" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success  text-white fw-bold"
+                                                            role="progressbar" style="width: 40%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             40%
                                                         </div>
                                                     </div>
@@ -104,7 +152,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="h6 d-inline">After Effects</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-primary  text-dark fw-bold" role="progressbar" style="width: 30%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-primary  text-dark fw-bold"
+                                                            role="progressbar" style="width: 30%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             30%
                                                         </div>
                                                     </div>
@@ -114,7 +164,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="h6 d-inline">Doodly</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  fw-bold text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success  fw-bold text-white"
+                                                            role="progressbar" style="width: 50%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             50%
                                                         </div>
                                                     </div>
@@ -134,7 +186,9 @@
                                                     <h6 class="h6 d-inline"> Html 5</h6>
 
                                                     <div class="progress border border-dark border-1   ">
-                                                        <div class="progress-bar  text-white fw-bold bg-secondary" role="progressbar" style="width: 35%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar  text-white fw-bold bg-secondary"
+                                                            role="progressbar" style="width: 35%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             35%
                                                         </div>
                                                     </div>
@@ -144,7 +198,9 @@
                                                 <div class="col-6">
                                                     <h6 class="h6 d-inline">CSS 3</h6>
                                                     <div class="progress border border-dark border-1   ">
-                                                        <div class="progress-bar bg-warning text-dark fw-bold" role="progressbar" style="width: 25%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-warning text-dark fw-bold"
+                                                            role="progressbar" style="width: 25%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             25%
                                                         </div>
                                                     </div>
@@ -154,7 +210,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="h6 d-inline">BootStrap</h6>
                                                     <div class="progress border border-dark border-1   ">
-                                                        <div class="progress-bar bg-warning  text-dark fw-bold" role="progressbar" style="width: 25%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-warning  text-dark fw-bold"
+                                                            role="progressbar" style="width: 25%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             25%
                                                         </div>
                                                     </div>
@@ -166,7 +224,9 @@
                                                     <h6 class="h6 d-inline">MySql</h6>
 
                                                     <div class="progress border border-dark border-1   ">
-                                                        <div class="progress-bar bg-danger text-dark fw-bold" role="progressbar" style="width: 15%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-danger text-dark fw-bold"
+                                                            role="progressbar" style="width: 15%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             15%
                                                         </div>
                                                     </div>
@@ -177,7 +237,9 @@
                                                 <div class="col-6 my-2">
                                                     <h6 class="h6 d-inline">Php</h6>
                                                     <div class="progress border-dark border border-1   ">
-                                                        <div class=" text-dark fw-bold progress-bar bg-danger " role="progressbar" style="width: 15%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class=" text-dark fw-bold progress-bar bg-danger "
+                                                            role="progressbar" style="width: 15%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             15%
                                                         </div>
                                                     </div>
@@ -196,7 +258,9 @@
                                                 <div class="col-6">
                                                     <h6 class="d-inline">Firebase Baas</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  text-white" role="progressbar" style="width: 66%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success  text-white"
+                                                            role="progressbar" style="width: 66%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             66%
                                                         </div>
                                                     </div>
@@ -204,7 +268,9 @@
                                                 <div class="col-6">
                                                     <h6 class="d-inline text-break"> SQLFlite</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  text-white" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success  text-white"
+                                                            role="progressbar" style="width: 60%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             60%
                                                         </div>
                                                     </div>
@@ -213,7 +279,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="d-inline text-break"> UI KIT</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success fw-bold text-white"
+                                                            role="progressbar" style="width: 50%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             50%
                                                         </div>
                                                     </div>
@@ -222,7 +290,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="d-inline text-break"> Provider</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success fw-bold text-white"
+                                                            role="progressbar" style="width: 40%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             40%
                                                         </div>
                                                     </div>
@@ -231,7 +301,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="d-inline text-break"> GETX</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success fw-bold text-white"
+                                                            role="progressbar" style="width: 50%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             50%
                                                         </div>
                                                     </div>
@@ -250,7 +322,9 @@
                                                 <div class="col-6">
                                                     <h6 class="d-inline">Theoretical Knowledge</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success  text-white" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success  text-white"
+                                                            role="progressbar" style="width: 60%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             60%
                                                         </div>
                                                     </div>
@@ -259,7 +333,9 @@
                                                 <div class="col-6 ">
                                                     <h6 class="d-inline text-break"> Domestic Wiring</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success fw-bold text-white"
+                                                            role="progressbar" style="width: 80%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             80%
                                                         </div>
                                                     </div>
@@ -268,7 +344,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="d-inline text-break"> Solar</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success fw-bold text-white"
+                                                            role="progressbar" style="width: 80%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             80%
                                                         </div>
                                                     </div>
@@ -277,7 +355,9 @@
                                                 <div class="col-6 my-3">
                                                     <h6 class="d-inline text-break"> SCADA</h6>
                                                     <div class="progress  border border-dark border-1  ">
-                                                        <div class="progress-bar bg-success fw-bold text-white" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-success fw-bold text-white"
+                                                            role="progressbar" style="width: 40%" aria-valuenow="100"
+                                                            aria-valuemin="0" aria-valuemax="100">
                                                             40%
                                                         </div>
                                                     </div>
@@ -293,6 +373,93 @@
 
                 </div>
             </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="/assets/Flutter.png" alt="Project Screenshot">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title"><a href="https://example.com/project">Project Title</a></h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </p>
+                        <a href="https://example.com/project" class="btn btn-primary">View Project</a> -->
+
+                        <h5 class="fw-bold card-title">Video Editor at Felex & Virginia</h5>
+                        <h4 class="card-title" >April 2019 - Present</h4>
+                        <div id="accordion">
+                            <div class="card ">
+                              <div class="card-header" id="panel1Heading">
+                                <h5 class="mb-0">
+                                   
+                                      
+                                  <button class="btn " data-toggle="collapse" data-target="#panel1Collapse" aria-expanded="true" aria-controls="panel1Collapse">
+                                    <i class="fas fa-plus"></i> Expand To See Responsbilities
+                                   
+
+                                  
+
+                                  </button>
+                                </h5>
+                              </div>
+                              <div id="panel1Collapse" class="collapse " aria-labelledby="panel1Heading" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul class="card-text">
+                                        <li>
+                                            Edit video footage into a polished and compelling final product
+                                        </li>
+                                        <li>
+                                            Use video editing software (e.g. Adobe Premiere, Final Cut Pro) to create high-quality
+                                            video content
+                                        </li>
+                                        <li>
+                                            Incorporate music, sound effects, and other elements into the final product
+                                        </li>
+                                        <li>
+                                            Collaborate with the production team to ensure that the final product meets the client's vision
+                                            and specifications
+                                        </li>
+                                        <li>
+                                            Work with a variety of video formats, including 4K and HDR
+                                        </li>
+                                        <li>
+                                            Ensure that all videos are edited to the highest quality standards
+                                        </li>
+                                        <li>
+            
+                                            Manage and maintain the video editing equipment
+                                        </li>
+                                        <li>
+                                            Keep up-to-date with the latest video editing software and techniques
+                                        </li>
+                                        <li>
+                                            Meet project deadlines and work within the given budget
+                                        </li>
+            
+                                    </ul>  
+                                </div>
+                              </div>
+                            </div>
+                          
+                           
+                          
+                            
+                          
+                                        
+                    
+                        <img class="profileskill img-fluid" src="/assets/playstore.png" alt="LOgo" srcset="" />
+                        <a href="https://www.youtube.com/channel/UCr9FLmzz2JAJRqa0nQpXFag" class="btn btn-primary">View
+                            Youtube Videos</a>
+
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+        </div>
+
     </section>
     <!-- Skills -->
     <!-- <h1 id="h1Skills">Skills</h1>
@@ -408,13 +575,16 @@
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-lg-4 mt-4">
                     <div class="card">
-                        <img class="img-thumbnail my-2 mx-2" width="30%" src="assets/play_prism_hlock_2x.png" alt="Card image">
+                        <img class="img-thumbnail my-2 mx-2" width="30%" src="assets/play_prism_hlock_2x.png"
+                            alt="Card image">
                         <div class="card-body">
                             <h5>Funny Meme App</h5>
                             <p class="card-text">
-                                Design and developed this app as class project while learning flutter it is in beta testing still. </p>
+                                Design and developed this app as class project while learning flutter it is in beta
+                                testing still. </p>
                             <div class="text-center">
-                                <a href="https://play.google.com/store/apps/details?id=com.felexkuria.memez_kenya" class="btn btn-success">Link</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.felexkuria.memez_kenya"
+                                    class="btn btn-success">Link</a>
                             </div>
                         </div>
                     </div>
@@ -470,6 +640,9 @@
     </div>
 </body>
 <!-- <script src="/bootstrap class/html/bootstrap-5.0.2-dist/js/bootstrap.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

@@ -87,7 +87,9 @@ p {
 
 .profileskill {
     border-radius: 10%;
-    width: 40%;
+    padding: auto;
+    width: 10%;
+    height: 10%;
     border: 2px solid black;
 }
 
