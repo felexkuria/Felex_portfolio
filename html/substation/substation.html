@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+    <!-- Font Awesome CSS CDN link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar p-2 mb-4">
+        <a class="navbar-brand mx-5" href="index.php">
+            <img src="https://raw.githubusercontent.com/felexkuria/substationDataLog/master/assets/logo.png" width="30"
+                height="30" class=" text-black-50 mx-auto" alt="Kenya Railways Logo">
+            <h5 class="text-black-50 d-inline ">KRC Electrical Usage</h5>
+        </a>
+        <ul class="nav px-5 justify-content-end">
+            <li class="nav-item ">
+                <div class="dropdown  d-inline border-dark border-2">
+                    <button class="btn  " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span><i class=" fa fa-home"></i></span> Substations <span> <i
+                                class=" fa fa-angle-down"></i></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item text-black-50" href="#">Athi River</a>
+
+                        <a class="dropdown-item text-black-50" href="#">Paranai</a>
+                        <a class="dropdown-item text-black-50" href="#">Simba</a>
+                        <a class="dropdown-item text-black-50" href="#">Voi</a>
+                        <a class="dropdown-item text-black-50" href="#">Mombasa West</a>
+                        <a class="dropdown-item text-black-50" href="./add_data.html">Mackinnon Road</a>
+
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link btn btn-primary " data-toggle="modal" data-target="#notificationModal" href="#">
+
+
+                    Notifications
+                    <!--                <i class="fa fa-bell"></i><span class=" badge badge-danger">4</span>-->
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="notification text-black-50" id="dismiss2">
+                                        <div class="notification-header">
+                                            <div class="icon-box"><i class="fa fa-square"></i></div>
+                                            <div class="d-flex flex-column">
+                                                <strong class="ml-3">
+                                                    <?php echo  $staffName;?>
+                                                </strong>
+                                                <small class="ml-3 small-text">
+                                                    <?php echo  $date;?>
+                                                </small>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="notification-message" id="collapseOne">
+                                            <?php echo "Mackinnon Substation"." "."power ". $kplcStatus;?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-black-50">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link d-inline " href="#"><img class="rounded-circle img-fluid "
+                        style="width: 50px; height: 50px" src="/assets/profile.jpg" alt="profile pic of user">
+                    <h6 class="text-black-50 mb-4 d-inline ">
+                        <?php  echo $staffName ?? "Guest";?>
+                    </h6>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  fw-bold" href="./logout.html">Log Out <i class=" fas fa-sign-out-alt"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid  mx-2">
+        <div class="row ">
+            <div class="col-3">
+                <div class="card d-flex ">
+                    <div class="card-header">
+                        <h5>Substations</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-black-50 fw-bold"><a href="add_data.html">Mackinnon Road
+                                </a>
+                                <!---->
+                            <li class="list-group-item text-black-50 fw-bold"><a href="#">Mombasa West</a></li>
+
+                            <li class="list-group-item text-black-50 fw-bold"><a href="#">Voi</a>
+                            <li class="list-group-item text-black-50 fw-bold"><a href="#">Simba</a>
+                            <li class="list-group-item text-black-50 fw-bold"><a href="#">Paranai</a>
+                            <li class="list-group-item text-black-50 fw-bold"><a href="#">Athi River</a>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-6  ">
+                <div class="card card bg-light p-2 " style="min-width: 100%">
+                    <table class="table  table-striped " style="min-width: 100%">
+                        <thead>
+                            <tr>
+                                <th>Substation</th>
+                                <th>Power(Kvarh)</th>
+                                <th>Power (Kwh)</th>
+                                <th data-type="date" data-format="YYYY/MM/DD">Period</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mackinnon Road </td>
+                                <td>
+                                    <?php echo $kvarh ??"";?>
+                                </td>
+                                <td>
+                                    <?php echo $kwh??""; ?>
+                                </td>
+                                <td>
+                                    <?php echo $date??"" ;?>
+                                </td>
+                                <td class="  text-white text-capitalize fw-bold btn p-2 text-white">
+                                    <!-- <?php echo $kplcStatus??"" ;?> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Athi River </td>
+                                <td>9958</td>
+                                <td>596</td>
+                                <td>2005/02/11</td>
+                                <td class="bg-success btn text-white p-2">On</td>
+                            </tr>
+                            <tr>
+                                <td>Voi</td>
+                                <td>9958</td>
+                                <td>596</td>
+                                <td>2005/02/11</td>
+                                <td class="bg-success btn text-white p-2">On</td>
+                            </tr>
+                            <tr>
+                                <td>Mombasa West </td>
+                                <td>9958</td>
+                                <td>596</td>
+                                <td>2005/02/11</td>
+                                <td class="bg-success btn text-white p-2">On</td>
+                            </tr>
+                            <tr>
+                                <td>Simba </td>
+                                <td>9958</td>
+                                <td>596</td>
+                                <td>2005/02/11</td>
+                                <td class="bg-success btn text-white p-2">On</td>
+                            </tr>
+
+                            <tr>
+                                <td>Paranai </td>
+                                <td>9958</td>
+                                <td>596</td>
+                                <td>2005/02/11</td>
+                                <td class="bg-success btn text-white p-2">On</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-3 bg-light">
+                <div class="card px-2 bg-light">
+
+
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold d-inline"> Substations Status</h4>
+                        <div class="row justify-content-center ">
+                            <div class="col-3 p-2">
+                                <p class="card-text fw-bold">Kplc On<span> <i style="color: green;"
+                                            class=" fa fa-cogs"></i></span></p>
+                            </div>
+                            <div class="col-3 p-2">
+                                <p class="card-text fw-bold"> Kplc Off <span> <i style="color: red;"
+                                            class=" fa fa-cogs"></i></span></p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-white text-capitalize <?php bgDanger();   ?>">Mackinnon Road
+                            <span> <i style="color: red;" class=" fa fa-cogs"></i></span>
+                        </li>
+                        <li class="list-group-item text-white text-capitalize bg-success">Athi River <span> <i
+                                    style="color: green;" class=" fa fa-cogs"></i></span> </li>
+                        <li class="list-group-item text-white text-capitalize bg-success">Voi<span> <i
+                                    style="color: green;" class=" fa fa-cogs"></i></span> </li>
+                        <li class="list-group-item text-white text-capitalize bg-success">Paranai <span> <i
+                                    style="color: green;" class=" fa fa-cogs"></i></span> </li>
+                        <li class="list-group-item text-white text-capitalize bg-success">Simba <span> <i
+                                    style="color: green;" class=" fa fa-cogs"></i></span> </li>
+
+                        <li class="list-group-item text-white text-capitalize bg-success">Mombasa West <span> <i
+                                    style="color: green;" class=" fa fa-cogs"></i></span> </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+
+                </div>
+                <div class="col-3"></div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

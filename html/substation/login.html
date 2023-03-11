@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Login</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Firebase configuration -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyC9Tne9fcJZi8yz50q-wwosH83LlfhIus4",
+            authDomain: "blue-b2e9c.firebaseapp.com",
+            projectId: "blue-b2e9c",
+            storageBucket: "blue-b2e9c.appspot.com",
+            messagingSenderId: "19520597692",
+            appId: "1:19520597692:web:0d600c97799dae36ae6ab9",
+            measurementId: "G-TJ9H53VGN7",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Login form submission -->
+    <script>
+        $(document).ready(function () {
+            $('#loginForm').submit(function (event) {
+                event.preventDefault(); // Prevent default form submission behavior
+                // Get user credentials
+                var email = $('#email').val();
+                var password = $('#password').val();
+                // Authenticate user with Firebase Authentication
+                firebase.auth().signInWithEmailAndPassword(email, password)
+                    .then(function (userCredential) {
+                        // User signed in successfully
+                        var user = userCredential.user;
+                        // Retrieve user data from Firebase Firestore
+                        firebase.firestore().collection('users').doc(user.uid).get()
+                            .then(function (doc) {
+                                // User data retrieved successfully
+                                var userData = doc.data();
+                                // Redirect user to dashboard page
+                                window.location.href = 'ajax_todolist.html';
+                            })
+                            .catch(function (error) {
+                                console.log(error);
+                            });
+                    })
+                    .catch(function (error) {
+                        // Handle authentication errors
+                        var errorMessage = error.message;
+                        alert(errorMessage);
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

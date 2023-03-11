@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar p-2 mb-4">
+        <a class="navbar-brand mx-5" href="./substation.html">
+            <img src="https://raw.githubusercontent.com/felexkuria/substationDataLog/master/assets/logo.png" width="30"
+                height="30" class=" text-black-50 mx-auto" alt="Kenya Railways Logo">
+            <h5 class="text-black-50 d-inline ">KRC Electrical Usage</h5>
+        </a>
+        <ul class="nav px-5 justify-content-end">
+            <li class="nav-item ">
+                <div class="dropdown  d-inline border-dark border-2">
+                    <button class="btn  " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span><i class=" fa fa-home"></i></span> Substations <span> <i
+                                class=" fa fa-angle-down"></i></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item text-black-50" href="#">Athi River</a>
+
+                        <a class="dropdown-item text-black-50" href="#">Paranai</a>
+                        <a class="dropdown-item text-black-50" href="#">Simba</a>
+                        <a class="dropdown-item text-black-50" href="#">Voi</a>
+                        <a class="dropdown-item text-black-50" href="#">Mombasa West</a>
+                        <a class="dropdown-item text-black-50" href="./add_data.html">Mackinnon Road</a>
+
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link btn btn-primary " data-toggle="modal" data-target="#notificationModal" href="#">
+
+
+                    Notifications
+                    <!--                <i class="fa fa-bell"></i><span class=" badge badge-danger">4</span>-->
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="notification text-black-50" id="dismiss2">
+                                        <div class="notification-header">
+                                            <div class="icon-box"><i class="fa fa-square"></i></div>
+                                            <div class="d-flex flex-column">
+                                                <strong class="ml-3">
+                                                    <?php echo  $staffName;?>
+                                                </strong>
+                                                <small class="ml-3 small-text">
+                                                    <?php echo  $date;?>
+                                                </small>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="notification-message" id="collapseOne">
+                                            <?php echo "Mackinnon Substation"." "."power ". $kplcStatus;?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-black-50">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link d-inline " href="#"><img class="rounded-circle img-fluid "
+                        style="width: 50px; height: 50px" src="/assets/profile.jpg" alt="profile pic of user">
+                    <h6 class="text-black-50 mb-4 d-inline ">
+                        <?php  echo $staffName ?? "Guest";?>
+                    </h6>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  fw-bold" href="./logout.html">Log Out <i class=" fas fa-sign-out-alt"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <?php include "nav_card.php"; ?>
+            </div>
+            <div class="col-3">
+                <!--            Data Entry done here-->
+                <div class="card bg-light">
+                    <div class="card-header">
+                        <img class="img-fluid"
+                            src="https://raw.githubusercontent.com/felexkuria/substationDataLog/master/assets/logo.png" " width="
+                            30" height="30" alt="" srcset="">
+                        <h5 class="fw-bold d-inline"> Meter Readings</h5>
+
+
+                    </div>
+                    <div class="card-body">
+                        <form action="add_data.html" method="post">
+                            <div class="mb-4">
+                                <!-- //time and selection ~how to input time and Date-->
+
+                                <label for="" class="form-label fw-bold">Enter Date</label>
+                                <input required name="date" type="datetime-local" class="form-control rounded-pill">
+
+                            </div>
+                            <div class="mb-4">
+                                <label for="" class="form-label fw-bold">Enter Cabinet No</label>
+
+                                <select required class="form-control" name="cabinet_no">
+                                    <option value="N1">N1</option>
+                                    <option value="N2">N2</option>
+                                    <option value="N3">N3</option>
+                                    <option value="N6">N6</option>
+                                    <option value="N7">N7</option>
+                                    <option value="N9">N9</option>
+                                    <option value="N10">N10</option>
+
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="" class="form-label fw-bold">Enter Kwh Readings</label>
+                                <input type="text" required class="form-control rounded-pill" name="readings_kwh" id=""
+                                    aria-describedby="helpId" placeholder="eg. 3000.00">
+                            </div>
+                            <div class="mb-4">
+                                <label for="" class="form-label fw-bold ">Enter Kvarh Readings</label>
+                                <input type="text" required class="form-control rounded-pill" name="readings_kvarh"
+                                    id="" aria-describedby="helpId" placeholder="eg.1672.00">
+                            </div>
+                            <div class="mb-4">
+                                <input value="Calculate" type="submit"
+                                    class="form-control rounded-pill btn btn-primary fw-bold" name="calculate" id=""
+                                    aria-describedby="helpId" placeholder="eg. 1619.23">
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <!-- <?php
+
+                include "config.php";
+
+                // select query
+                $sql="SELECT `id`, `attendantName`, `date`, `cabinetId`, `readings_kwh`, `readings_kvarh` FROM `dailylog`";
+
+
+                $result = mysqli_query($conn,$sql);
+
+                if ($result){
+                    $data = mysqli_num_rows($result);
+
+                    if ($data>0){
+                        echo "<div class='card card bg-light p-2' style='min-width: 100%'>";
+                        echo "<div class='card-header'>";
+                        echo "<div class='card-header'>
+                    <img class='img-fluid' src="https://raw.githubusercontent.com/felexkuria/substationDataLog/master/assets/logo.png" width='30' height='30' >
+                    <h5 class='fw-bold d-inline'> Daily Meter Readings</h5>
+                </div>";
+                        echo "<table   class='table table-striped '>";
+                        echo " <thead>";
+                        echo "<tr>";
+                        echo "<th># </th>";
+                        echo "<th>Attendant Name </th>";
+                        echo "<th>Date </th>";
+                        echo "<th>Cabinet Id </th>";
+                        echo "<th>Readings Kwh </th>";
+                        echo "<th>Readings Kvarh</th>";
+
+                        echo "</tr>";
+                        echo " </thead>";
+
+                        while ($row = mysqli_fetch_array($result)){
+
+                            echo "<tbody>";
+                            echo "<tr>";
+                            echo "<td>".$row['id']."</td>";
+                            echo "<td>".$row['attendantName']."</td>";
+                            echo "<td>".$row['date']."</td>";
+                            echo "<td>".$row['cabinetId']."</td>";
+                            echo "<td>".$row['readings_kwh']."</td>";
+                            echo "<td>".$row['readings_kvarh']."</td>";
+
+                            $_SESSION["id"]=$row["id"]??0;
+                           $_SESSION["date"]  = $row['date'];
+                           $_SESSION['cabinetId']  = $row['cabinetId'];
+                           $_SESSION["readings_kwh"]  = $row['readings_kwh'];
+                           $_SESSION["readings_kvarh"]  = $row['readings_kvarh'];
+
+
+                            echo "<td>
+     <div class='row mb-4'>    
+           <div class='col-6'>   <a href='delete.php?id=".$row['id']." ' class='' ><i style='color: red' class='fa fa-1x fa-trash'></i></a> 
+             </div><div class='col-6'>
+               <a href='update.php?id=".$row['id']."' class='' ><i class='fa fa-1x fa-pencil'></i></a> 
+</div>
+</div>
+                 </td>";
+                            echo "<tr>";
+                            echo "</tbody>";
+                        }
+
+                        echo "</table>";
+                        echo "</div>";
+                        echo "</div>";
+
+
+
+
+
+
+                    }else{
+                        echo "<em class='alert alert-info'>No data found</em>";
+                    }
+
+
+
+
+
+
+                }else{
+                    echo "<p class='alert alert-warning'>error executing your query $sql</p>".mysqli_error($conn);
+                }
+                mysqli_close($conn);
+                                ?> -->
+            </div>
+
+        </div>
+</body>
+
+</html>
